@@ -3,7 +3,7 @@
 #include "DAC121C08X.h"
 
 // Initialize objects from the lib
-DAC121C08X dac(0x09, VREF=5.0);
+DAC121C08X dac(0x09, 5.0);
 
 void setup() {
     // Call functions on initialized library objects that require hardware

@@ -22,7 +22,7 @@ void DAC121C08X::begin()
     return;
 }
 
-void DAC121C08X::write_value(unsigned int val)
+bool DAC121C08X::write_value(unsigned int val)
 {
     if (val > 4095) {
       return false;
@@ -44,7 +44,7 @@ void DAC121C08X::write_value(unsigned int val)
 }
 
 
-void DAC121C08X::write_voltage(float voltage)
+bool DAC121C08X::write_voltage(float voltage)
 {
     unsigned int _val;
 
