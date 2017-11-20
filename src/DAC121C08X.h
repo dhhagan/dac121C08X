@@ -6,12 +6,14 @@
 // This will load the definition for common Particle variable types
 #include "Particle.h"
 
+#define DEFAULT_ADDR 0x09   // ADDR0 = GND, ADDR1 = GND
+
 // This is your main class that users will import into their application
 class DAC121C08X
 {
 public:
 
-  DAC121C08X(uint8_t ADDR, float VREF = 5.0);
+  DAC121C08X(uint8_t ADDR = DEFAULT_ADDR, float VREF = 5.0);
 
 
   void begin();
